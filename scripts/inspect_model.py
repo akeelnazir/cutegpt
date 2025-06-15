@@ -27,7 +27,7 @@ def main():
     
     # Load the saved model state dictionary
     print("\nLoading model state dictionary...")
-    model_path = "models/tiny_llm.pth"
+    model_path = "models/cute_llm.pth"
     state_dict = torch.load(model_path)
     
     # Print the keys (layer names) in the state dictionary
@@ -62,7 +62,7 @@ def main():
     print("\nThis is how you use a saved model:")
     print("1. Define the model architecture with the same configuration")
     print("2. Initialize the model: model = CuteLLM(config)")
-    print("3. Load the saved weights: model.load_state_dict(torch.load('tiny_llm.pth'))")
+    print("3. Load the saved weights: model.load_state_dict(torch.load('cute_llm.pth'))")
     print("4. Set to evaluation mode for inference: model.eval()")
     print("5. Use the model for predictions!")
 

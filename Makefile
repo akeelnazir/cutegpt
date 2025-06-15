@@ -16,6 +16,14 @@ help:
 	@echo "  test-phrase - Test phrase completion"
 	@echo "  evaluate    - Evaluate phrase completion"
 	@echo ""
+	@echo "Example commands:"
+	@echo "  examples    - Run all examples"
+	@echo "  example1    - Run basic text generation example"
+	@echo "  example2    - Run interactive completion example"
+	@echo "  example3    - Run custom fine-tuning example"
+	@echo "  example4    - Run phrase completion example"
+	@echo "  example5    - Run model inspection example"
+	@echo ""
 
 # Create virtual environment
 .PHONY: venv
@@ -69,3 +77,39 @@ test-phrase:
 .PHONY: evaluate
 evaluate:
 	.venv/bin/python scripts/evaluate_phrase_completion.py
+
+# Example commands
+# Run all examples
+.PHONY: examples
+examples: example1 example2 example3 example4 example5
+	@echo "All examples have been run!"
+
+# Run basic text generation example
+.PHONY: example1
+example1:
+	@echo "Running basic text generation example..."
+	.venv/bin/python examples/01_basic_text_generation.py
+
+# Run interactive completion example
+.PHONY: example2
+example2:
+	@echo "Running interactive completion example..."
+	.venv/bin/python examples/02_interactive_completion.py
+
+# Run custom fine-tuning example
+.PHONY: example3
+example3:
+	@echo "Running custom fine-tuning example..."
+	.venv/bin/python examples/03_custom_fine_tuning.py
+
+# Run phrase completion example
+.PHONY: example4
+example4:
+	@echo "Running phrase completion example..."
+	.venv/bin/python examples/04_phrase_completion.py
+
+# Run model inspection example
+.PHONY: example5
+example5:
+	@echo "Running model inspection example..."
+	.venv/bin/python examples/05_model_inspection.py

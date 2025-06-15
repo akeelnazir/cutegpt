@@ -22,7 +22,7 @@ data/               # Training data
 examples/           # Example implementations
 
 models/             # Saved model weights
-  └── tiny_llm.pth  # Trained model weights
+  └── cute_llm.pth  # Trained model weights
 
 scripts/            # Utility scripts
   ├── generate_text.py          # Text generation demo

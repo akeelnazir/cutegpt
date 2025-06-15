@@ -55,7 +55,7 @@ def run_training():
     
     # Save the model weights
     print("Saving model weights...")
-    save_path = "models/tiny_llm.pth"
+    save_path = "models/cute_llm.pth"
     torch.save(model.state_dict(), save_path)
     print(f"Model saved to {save_path}")
     

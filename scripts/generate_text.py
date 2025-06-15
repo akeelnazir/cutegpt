@@ -32,7 +32,7 @@ def main():
     model = CuteLLM(config)
     
     # Try to load saved model weights
-    model_path = "models/tiny_llm.pth"
+    model_path = "models/cute_llm.pth"
     try:
         model.load_state_dict(torch.load(model_path))
         print(f"✓ Loaded model weights from {model_path}")
