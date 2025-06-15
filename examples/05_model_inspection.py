@@ -53,8 +53,9 @@ def visualize_embeddings(model, tokenizer, words):
     plt.tight_layout()
     
     # Save the figure
-    plt.savefig("word_embeddings.png")
-    print(f"Embeddings visualization saved as 'word_embeddings.png'")
+    os.makedirs("docs/images", exist_ok=True)
+    plt.savefig("docs/images/word_embeddings.png")
+    print(f"Embeddings visualization saved as 'docs/images/word_embeddings.png'")
 
 def analyze_attention(model, tokenizer, sentence):
     """

@@ -66,9 +66,20 @@ Heatmap showing prediction probabilities across different tokens, providing insi
 
 ![Token Heatmap](docs/images/token_heatmap.png)
 
+### Word Embeddings Visualization
+
+A 2D projection of the model's word embeddings using PCA, showing how words are represented in the model's vector space. Similar words appear closer together, demonstrating how the model captures semantic relationships between words:
+
+![Word Embeddings](docs/images/word_embeddings.png)
+
 Generate these visualizations with:
 ```bash
 make visualize
+```
+
+You can view all visualizations together in the interactive HTML page:
+```
+docs/model_visualizations.html
 ```
 
 ## Getting Started

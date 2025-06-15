@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CuteGPT Model Visualizations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .visualization {
+            margin-bottom: 40px;
+        }
+        img {
+            max-width: 100%;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .description {
+            margin-top: 10px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1>CuteGPT Model Visualizations</h1>
+    
+    <div class="visualization">
+        <h2>Model Architecture</h2>
+        <img src="docs/images/model_architecture.png" alt="Model Architecture">
+        <p class="description">
+            This diagram shows the complete architecture of the CuteGPT model, including the embedding layer, 
+            transformer layers with self-attention and feed-forward components, and the output layer.
+        </p>
+    </div>
+    
+    <div class="visualization">
+        <h2>Logits Visualization</h2>
+        <img src="docs/images/logits_visualization.png" alt="Logits Visualization">
+        <p class="description">
+            This visualization shows the model's prediction scores (logits) at each position in the input sequence,
+            displaying the top token predictions and their probabilities.
+        </p>
+    </div>
+    
+    <div class="visualization">
+        <h2>Token Prediction Heatmap</h2>
+        <img src="docs/images/token_heatmap.png" alt="Token Heatmap">
+        <p class="description">
+            This heatmap displays prediction probabilities across different tokens at each position in the input,
+            showing which tokens the model considers likely to appear next.
+        </p>
+    </div>
+    
+    <div class="visualization">
+        <h2>Word Embeddings</h2>
+        <img src="docs/images/word_embeddings.png" alt="Word Embeddings">
+        <p class="description">
+            This 2D projection (using PCA) shows how words are represented in the model's vector space.
+            Similar words should appear closer together in this embedding space.
+        </p>
+    </div>
+</body>
+</html>
