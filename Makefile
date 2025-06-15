@@ -9,10 +9,11 @@ help:
 	@echo "  setup       - Complete setup for development (creates venv, installs dependencies)"
 	@echo "  install     - Install the package and its dependencies"
 	@echo "  dev         - Install the package in development mode"
-	@echo "  run         - Run the model training"
-	@echo "  generate    - Generate text with the model"
-	@echo "  inspect     - Inspect the model"
-	@echo "  test        - Test interactive completion"
+	@echo "  run         - Train the model"
+	@echo "  generate    - Generate text using the trained model"
+	@echo "  inspect     - Inspect the model architecture"
+	@echo "  visualize   - Generate model visualizations"
+	@echo "  test        - Run tests for interactive completion"
 	@echo "  test-phrase - Test phrase completion"
 	@echo "  evaluate    - Evaluate phrase completion"
 	@echo ""
@@ -23,6 +24,8 @@ help:
 	@echo "  example3    - Run custom fine-tuning example"
 	@echo "  example4    - Run phrase completion example"
 	@echo "  example5    - Run model inspection example"
+	@echo "  visualize   - Run model visualization script"
+	@echo "  examples    - Run all example scripts"
 	@echo ""
 
 # Create virtual environment
@@ -113,3 +116,9 @@ example4:
 example5:
 	@echo "Running model inspection example..."
 	.venv/bin/python examples/05_model_inspection.py
+
+# Run model visualization script
+.PHONY: visualize
+visualize:
+	@echo "Running model visualization script..."
+	.venv/bin/python scripts/model_visualization.py

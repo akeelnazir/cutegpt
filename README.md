@@ -14,27 +14,61 @@ cutellm/            # Core model implementation
   ├── model_base.py # CuteLLM model definition
   ├── inference_base.py # Text generation functions
   ├── tokenizer.py  # Tokenization functionality
-  └── training_base.py  # Training functions
+  └── training_base.py # Model training functionality
 
 data/               # Training data
-  └── training_data.txt # Simple text for training
+  └── training_data.txt # Sample text for training
 
-examples/           # Example implementations
+examples/           # Educational examples
+  ├── 01_basic_text_generation.py # Basic text generation demo
+  ├── 02_interactive_completion.py # Interactive text completion
+  ├── 03_custom_fine_tuning.py # Fine-tuning on custom data
+  ├── 04_phrase_completion.py # Phrase completion with mask tokens
+  ├── 05_model_inspection.py # Model inspection and visualization
+  └── README.md     # Examples documentation
 
 models/             # Saved model weights
   └── cute_llm.pth  # Trained model weights
 
 scripts/            # Utility scripts
-  ├── generate_text.py          # Text generation demo
-  ├── inspect_model.py          # Model inspection tool
-  └── evaluate_phrase_completion.py # Evaluation script
+  ├── evaluate_phrase_completion.py # Phrase completion evaluation
+  ├── generate_text.py # Text generation script
+  ├── inspect_model.py # Model inspection utilities
+  └── model_visualization.py # Model visualization tools
 
-tests/              # Test scripts
-  ├── test_completion.py        # Interactive phrase completion test
-  └── test_phrase_completion.py # Basic phrase completion test
+tests/              # Test suite
+  ├── test_completion.py # Tests for text completion
+  └── test_phrase_completion.py # Tests for phrase completion
 
-main.py            # Main entry point
+Makefile           # Build automation
 setup.py           # Package setup script
+```
+
+## Visualizations
+
+The project includes tools to generate visualizations that help understand the model:
+
+### Model Architecture
+
+Visual representation of the model's layers, showing the embedding layer, transformer blocks, and output layer:
+
+![Model Architecture](docs/images/model_architecture.png)
+
+### Logits Visualization
+
+Bar charts showing the model's token predictions at each position in the input text:
+
+![Logits Visualization](docs/images/logits_visualization.png)
+
+### Token Prediction Heatmap
+
+Heatmap showing prediction probabilities across different tokens, providing insight into the model's decision-making process:
+
+![Token Heatmap](docs/images/token_heatmap.png)
+
+Generate these visualizations with:
+```bash
+make visualize
 ```
 
 ## Getting Started
